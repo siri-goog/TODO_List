@@ -1,0 +1,26 @@
+<%- include('header') -%>
+
+<div class="container">
+    <h1>Login</h1>
+    <hr>
+    <form method="POST" action="/login">
+        <div class="container_form">
+            <label for="username"><b>Username</b></label>
+            <span class="alert"><label class="alert" id="alertUsername"></label></span>
+            <input type="text" placeholder="Enter username" name="username" id="username" required>
+        
+            <label for="password"><b>Password</b></label>
+            <span class="alert"><label id="alertPassword"></label></span>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                
+            <button type="submit" class="loginBtn" id="loginBtn" name="loginBtn">Login</button>
+        </div>
+    
+        <div class="container_button">
+            <button type="button" class="cancelBtn" id="cancelBtn" name="cancelBtn">Cancel</button>
+            <span class="psw">Don't have an account yet? <a href="/register">Register</a></span>
+        </div>
+    </form> 
+</div>
+
+<%- include('footer') -%></form>

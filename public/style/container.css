@@ -1,0 +1,15 @@
+.container {
+    padding: 0 20% 0 20%;
+}
+.container_form {
+    padding: 16px;
+}
+.container_button {
+    padding: 16px;
+    background-color:#f1f1f1;
+}
+.container_signin {
+    padding: 16px;
+    background-color:#f1f1f1;
+    text-align: center;
+}
