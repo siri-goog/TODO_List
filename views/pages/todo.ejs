@@ -1,11 +1,20 @@
 <%- include('header') -%>
 
-<!-- Content -->
-<div id="Content">
-  TO-DO
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">My To Do List</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="addTodo()" class="addBtn">Add</span>
 </div>
 
-<!-- References to external JS files -->
+<ul id="myUL">
+  <li>Hit the gym</li>
+  <li class="checked">Pay bills</li>
+  <li>Meet George</li>
+  <li>Buy eggs</li>
+  <li>Read a book</li>
+  <li>Organize office</li>
+</ul>
+
 <script src="/static/js/todo.js"></script>
 
 <%- include('footer') -%>
