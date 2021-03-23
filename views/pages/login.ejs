@@ -22,7 +22,7 @@
   <div class="container">
     <form method="POST" action="/login">
       <div class="row">
-        <h2 style="text-align:center">Login with Social Media or this site</h2>
+        <h2 style="text-align:center">Login with Social Media or Manually</h2>
         <div class="vl">
           <span class="vl-innertext">or</span>
         </div>
@@ -44,9 +44,13 @@
             <p>Or sign in manually:</p>
           </div>
 
-          <input type="text" name="email" placeholder="Email" required>
-          <input type="password" name="password" placeholder="Password" required>
-          <input type="submit" value="Login">
+          <label id="emailMsg"></label>
+          <input type="text" id="email" name="email" placeholder="Email" required>
+
+          <label id="passwordMsg"></label>
+          <input type="password" id="password" name="password" placeholder="Password" required>
+          
+          <input type="submit" value="Login" id="loginBtn">
         </div>
         
       </div>
@@ -63,6 +67,9 @@
       </div>
     </div>
   </div>
+
+  <!-- References to external JS files -->
+  <script src="/static/js/login.js"></script>
 
 </body>
 </html>
