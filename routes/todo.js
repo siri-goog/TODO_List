@@ -1,16 +1,17 @@
 const express = require('express')
-const router = express.Router();
-const validator = require('validator');
+const router = express.Router()
+const validator = require('validator')
 const db = require('../database')
-const crypto = require('crypto');
+const crypto = require('crypto')
+const sessionChecker = require("./middleware/sessionChecker")
 
-router.get('/', (req, res) => {
+router.get('/', sessionChecker, (req, res) => {
     res.render('pages/todo', {
         username: req.session.username
     })
 })
 //--Get to-do details
-router.get('/loadTodo', (req, res) => {
+router.get('/loadTodo', sessionChecker, (req, res) => {
     db.any('SELECT * FROM todo WHERE user_id = $1;', [req.session.user_id])
     .then((data) => {
         if (data.length > 0) {
@@ -29,7 +30,7 @@ router.get('/loadTodo', (req, res) => {
     })
 })
 //--Add to-do
-router.post('/addTodo', (req, res) => {
+router.post('/addTodo', sessionChecker, (req, res) => {
     const { desc } = req.body
     const status = 1 //In progress
     try {
@@ -45,7 +46,7 @@ router.post('/addTodo', (req, res) => {
     }
 })
 //--Delete to-do
-router.post('/deleteTodo/:todo_id', (req, res) => {
+router.post('/deleteTodo/:todo_id', sessionChecker, (req, res) => {
     const todo_id = req.params.todo_id
     try {
         db.query('DELETE FROM todo WHERE todo_id = $1;', [todo_id])
@@ -59,4 +60,5 @@ router.post('/deleteTodo/:todo_id', (req, res) => {
         console.log(error.message)
     }
 })
+
 module.exports = router
