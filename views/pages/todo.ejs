@@ -1,19 +1,19 @@
 <%- include('header') -%>
 
-<div id="myDIV" class="header">
-  <input type="text" id="myInput" placeholder="Title...">
-  <span onclick="addTodo()" class="addBtn">Add</span>
+<div id="addTodo">
+  <form method="POST" action="/todo/addTodo">
+    <input type="text" id="desc" name="desc" placeholder="Description...">
+    <input type="submit" value="Add">
+    <!--<span onclick="addTodo()" class="addBtn">Add</span>-->
+  </form>
 </div>
 
-<ul id="myUL">
-  <li>Hit the gym</li>
-  <li class="checked">Pay bills</li>
-  <li>Meet George</li>
-  <li>Buy eggs</li>
-  <li>Read a book</li>
-  <li>Organize office</li>
-</ul>
+<div id="divTodo">
+    <ul id="listTodo" onshow="loadTodo()">
+    </ul>
+</div>
 
+<!-- References to external JS files -->
 <script src="/static/js/todo.js"></script>
 
 <%- include('footer') -%>
