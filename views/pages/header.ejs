@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TO-DO List</title>
+    <title>TO-DO</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- References to external CSS files -->
@@ -22,16 +22,8 @@
 
 <!-- Navigation Bar -->
 <div class="navbar">
-  <% if(username){ %>
-    <a id="username" href="#">Welcome <%= username %></a>
-    <div style="width: 70%;"></div>
-  <% } else { %>
-    <div style="width: 80%;"></div>
-  <%}%>
-    <a href="/todo">To-Do List</a>
-  <% if(!user_id){ %>
-    <a href="/login">Login</a>
-  <% } else { %>
-    <a href="/logout">Logout</a>
-  <%}%>
+  <a id="username" href="#">Welcome ... <%= username %></a>
+  <div style="width: 68%;"></div>
+  <a href="/todo">TO-DO</a>
+  <a href="/logout">Logout</a>
 </div>

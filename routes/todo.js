@@ -4,12 +4,9 @@ const validator = require('validator');
 const db = require('../database')
 const crypto = require('crypto');
 
-let username = ""
-
 router.get('/', (req, res) => {
     res.render('pages/todo', {
-        username: username,
-        user_id: req.session.user_id
+        username: req.session.username
     })
 })
 
