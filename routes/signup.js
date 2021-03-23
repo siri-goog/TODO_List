@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
             err = true
         //----Password must be at least 8 characters with at least 1 lowercase, 1 uppercase, 1 number and 1 symbol
         } else if (!validator.isStrongPassword(password)) {
-            //err = true
+            err = true
         }
 
         //--Confirm password
