@@ -1,7 +1,7 @@
 const pgp = require('pg-promise')()
 
 const pguser = "postgres"
-const pgpassword = "yourpassword"
+const pgpassword = "qweiop93"
 const pghost = "localhost"
 const pgport = "5432"
 

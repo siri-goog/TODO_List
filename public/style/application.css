@@ -5,20 +5,21 @@
 body {
     font-family: Arial;
     margin: 0;
+    background-color: #FFDBDA;
 }
 
 /* Header/logo Title */
 .header {
     padding: 20px;
     text-align: center;
-    background: #1abc9c;
+    background: #DB7F8E;
     color: white;
 }
 
 /* Style the top navigation bar */
 .navbar {
     display: flex;
-    background-color: #333;
+    background-color: #666;
     margin: 0 0 2% 0;
     padding-left: 5%;
 }
@@ -52,7 +53,7 @@ body {
 margin: 2% 0 0 0;
 padding: 20px;
 text-align: center;
-background: #1abc9c;
+background: #DB7F8E;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */

@@ -24,3 +24,10 @@
 .closeBtn:hover {
   color: black;
 }
+
+/* Error Message */
+.errMsg {
+  color: red;
+  font-size: small;
+  float: right;
+}
